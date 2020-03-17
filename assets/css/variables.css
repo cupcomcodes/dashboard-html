@@ -1,0 +1,28 @@
+:root {
+	--palette-color1: #00a8ff;
+	--palette-color2: #9c88ff;
+	--palette-color3: #4cd137;
+	--palette-color4: #fbc531;
+	--palette-color-icons: #70a1ff;
+	--palette-color-borders:  #f5f5f5;
+}
+
+
+
+/* color pallet */
+
+.color1 {
+    background: var(--palette-color1);
+}
+
+.color2 {
+    background: var(--palette-color2);
+}
+
+.color3 {
+    background: var(--palette-color3);
+}
+
+.color4 {
+    background: var(--palette-color4);
+}

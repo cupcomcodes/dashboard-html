@@ -1,0 +1,198 @@
+
+
+/* list menu */
+
+.dash_list {
+    background: var(--white);
+    box-shadow: 2px 0px 24px 0px rgba(0, 0, 0, 0.07);
+    height: 100vh;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 50px;
+    transition: .4s;
+    z-index: 3;
+}
+
+
+/* items menu */
+
+.dash_list-item {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    /* align icon center */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* transtion */
+    transition: .4s;
+}
+
+
+/* color text items */
+
+.dash_list-item span,
+.dash_list-item i {
+    color: var(--palette-color-icons);
+}
+
+
+/* hover colors and borders*/
+
+.dash_list-item:hover {
+    background:  var(--palette-color-icons);
+    border-radius: 0px 5px 5px 0px;
+}
+
+
+/* hover color icon menu*/
+
+.dash_list-item:hover i {
+    color: var(--white);
+}
+
+
+/* display name */
+
+.dash_list-item .dash_list-item-name {
+    align-items: center;
+    background: var(--white);
+    border-radius: 26px;
+    box-shadow: 2px 0px 24px 0px rgba(0, 0, 0, 0.07);
+    color: var(--white);
+    display: flex;
+    font-size: 12px;
+    height: 30px;
+    left: 0;
+    opacity: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    transition: .4s;
+    visibility: hidden;
+}
+
+
+/* pseudo class before border-radius */
+
+.dash_list-item .dash_list-item-name:before {
+    content: '';
+    border-color: transparent;
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+/* pseudo class after border-radius */
+
+.dash_list-item .dash_list-item-name:after {
+    content: '';
+    border-color: transparent;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.dash_list-item:hover .dash_list-item-name {
+    background: var(--palette-color-icons);
+    left: 35px;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* pseudo class before border-radius active */
+
+.dash_list-item:hover .dash_list-item-name:before {
+    content: '';
+    position: absolute;
+    border-left: 2px solid var(--palette-color-icons);
+    left: 12px;
+    top: -6px;
+    background: transparent;
+    width: 9px;
+    height: 7px;
+    border-radius: 0px 0px 0px 10px;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* pseudo class after border-radius active */
+
+.dash_list-item:hover .dash_list-item-name:after {
+    content: '';
+    position: absolute;
+    border-left: 2px solid var(--palette-color-icons);
+    left: 12px;
+    bottom: -6px;
+    background: transparent;
+    width: 9px;
+    height: 7px;
+    border-radius: 10px 0px 0px 0px;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* if the class .expand is active in .dash_container perform the actions below */
+
+.dash_container.expand .dash_section {
+    width: 225px;
+}
+
+.dash_container.expand .dash_section .dash_list {
+    width: 200px;
+}
+
+.dash_container.expand .dash_section .dash_list .dash_list-item {
+    width: auto;
+    justify-content: start;
+    padding-left: 15px;
+}
+
+.dash_container.expand .dash_section .dash_list .dash_list-item .dash_list-item-name {
+    position: static;
+    visibility: visible;
+    opacity: 1;
+    color: #979797;
+    background: transparent;
+    box-shadow: none;
+    height: auto;
+    border-radius: none;
+}
+
+.dash_container.expand .dash_section .dash_list .dash_list-item .dash_list-item-name:before,
+.dash_container.expand .dash_section .dash_list .dash_list-item .dash_list-item-name:after {
+    display: none;
+}
+
+.dash_container.expand .dash_section .dash_list .dash_list-item:hover {
+    border-radius: 0;
+}
+
+.dash_container.expand .dash_section .dash_list .dash_list-item:hover .dash_list-item-name {
+    color: var(--white);
+}
+
+.dash_container.expand .dash_section .retract-item {
+    display: flex;
+}
+
+.dash_container .dash_section .retract-item {
+    display: none;
+}
+
+.dash_container.expand .dash_section .expand-item {
+    display: none;
+}
+
+.dash_container.expand .dash_container-content {
+    padding-left: 200px;
+}
+
+

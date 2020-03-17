@@ -1,0 +1,9 @@
+.dash_table {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.dash_table .dataTables_filter,
+.dash_table .pagination {
+    float: right;
+}

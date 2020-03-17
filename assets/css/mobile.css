@@ -1,0 +1,50 @@
+/* remove button mobile in desktop */
+.dash_section-menu-mobile {
+    display: none
+}
+
+/* mobile 768px */
+
+@media (max-width: 768px) {
+    .dash_list {
+        display: none;
+    }
+    .dash_container.expand .dash_container-content,
+    .dash_container-content {
+        padding-left: 0;
+    }
+    .search_input {
+        width: 155px;
+    }
+    .dash_list-item-name .retract-item {
+        width: 30px
+    }
+    .dash_section-menu-mobile {
+        width: 30px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #70a1ff;
+    }
+    .dash_container.expand .dash_list {
+        display: block
+    }
+    .dash_container.expand:before {
+        background: #00000059;
+        content: '';
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+    }
+    .header_container {
+        padding: 0
+    }
+    .dash_container.expand .dash_section {
+        width: 50px;
+    }
+    .nav_menu-list-item-link span {
+        display: none;
+    }
+}

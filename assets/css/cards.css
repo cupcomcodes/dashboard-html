@@ -1,0 +1,27 @@
+.dash_card_items-content {
+    align-items: center;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+.dash_card_items-content i {
+    font-size: 50px;
+    color: var(--white);
+}
+
+.dash_card_items-content .items {
+    display: flex;
+    flex-direction: column
+}
+
+.dash_card_items-content .order_number {
+    color: var(--white);
+    font-size: 33px;
+}
+
+.dash_card_items-content .order_text {
+    color: var(--white);
+}

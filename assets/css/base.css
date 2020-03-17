@@ -1,411 +1,48 @@
-/* color pallet */
-.color1 {
-  background: #00a8ff
-}
 
-.color2 {
-  background: #9c88ff
-}
 
-.color3 {
-  background: #4cd137
-}
-
-.color4 {
-   background: #fbc531
-}
 
 .thumb-nail {
-  border-radius: 50px;
-  width: 30px;
-  height: 30px;
-  border: 2px solid #fff
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--white);
 }
 
 
 /* contaner dashboad all */
+
 .dash_container {
-  height: 100vh;
+    height: 100vh;
 }
+
+
 /* flex container */
+
 .dash_container-flex {
-  display: flex;
+    display: flex;
 }
 
 .dash_section {
-  height: auto;
-  width: 50px;
-  display: block;
-  height: 50px;
-  transition: .4s;
-}
-
-/* list menu */
-.dash_list {
-  background: #fff;
-  box-shadow: 2px 0px 24px 0px rgba(0,0,0,0.07);
-  height: 100vh;
-  left: 0;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  width: 50px;
-  transition: .4s;
-  z-index: 3;
-}
-
-/* items menu */
-.dash_list-item {
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  position: relative;
-  /* align icon center */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* transtion */
-  transition: .4s;
-}
-/* color text items */
-.dash_list-item span, 
-.dash_list-item i {
-  color: #70a1ff;
-}
-/* hover colors and borders*/
-.dash_list-item:hover {
-  background: #70a1ff;
-  border-radius: 0px 5px 5px 0px;
-
-}
-/* hover color icon menu*/
-.dash_list-item:hover i {
-  color: #fff;
+    height: auto;
+    width: 50px;
+    display: block;
+    height: 50px;
+    transition: .4s;
 }
 
 
-/* display name */
-.dash_list-item .dash_list-item-name {
-  align-items: center;
-  background: #fff;
-  border-radius: 26px;
-  box-shadow: 2px 0px 24px 0px rgba(0,0,0,0.07);
-  color: #fff;
-  display: flex;
-  font-size: 12px;
-  height: 30px;
-  left: 0;
-  opacity: 0;
-  padding-left: 20px;
-  padding-right: 20px;
-  position: absolute;
-  transition: .4s;
-  visibility: hidden;
-}
-/* pseudo class before border-radius */
-.dash_list-item .dash_list-item-name:before {
-  content: '';
-  border-color: transparent;
-  visibility: hidden;
-  opacity: 0;
-}
-/* pseudo class after border-radius */
-.dash_list-item .dash_list-item-name:after {
-  content: '';
-  border-color: transparent;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.dash_list-item:hover .dash_list-item-name {
-  background: #70a1ff;
-  left: 35px;
-  opacity: 1;
-  visibility: visible;
-
-}
-/* pseudo class before border-radius active */
-.dash_list-item:hover .dash_list-item-name:before {
-  content: '';
-  position: absolute;
-  border-left: 2px solid#70a1ff;
-  left: 12px;
-  top: -6px;
-  background:transparent;
-  width: 9px;
-  height: 7px;
-  border-radius: 0px 0px 0px 10px;
-  visibility: visible;
-  opacity: 1;
-}
-/* pseudo class after border-radius active */
-.dash_list-item:hover .dash_list-item-name:after {
-  content: '';
-  position: absolute;
-  border-left: 2px solid#70a1ff;
-  left: 12px;
-  bottom: -6px;
-  background:transparent;
-  width: 9px;
-  height: 7px;
-  border-radius: 10px 0px 0px 0px;
-  visibility: visible;
-  opacity: 1;
-}
-
-/* if the class .expand is active in .dash_container perform the actions below */
-.dash_container.expand .dash_section {
-  width: 225px;
-}
-
-.dash_container.expand .dash_section .dash_list{
-  width: 200px;
-}
-
-.dash_container.expand .dash_section .dash_list .dash_list-item {
-  width: auto;
-  justify-content: start;
-  padding-left: 15px;
-}
-
-.dash_container.expand .dash_section .dash_list .dash_list-item .dash_list-item-name {
-  position: static;
-  visibility: visible;
-  opacity: 1;
-  color: #979797;
-  background: transparent;
-  box-shadow: none;
-  height: auto;
-  border-radius: none;
-}
-
-.dash_container.expand .dash_section .dash_list .dash_list-item .dash_list-item-name:before,
-.dash_container.expand .dash_section .dash_list .dash_list-item .dash_list-item-name:after {
-  display: none;
-}
-
-.dash_container.expand .dash_section .dash_list .dash_list-item:hover {
-  border-radius: 0;
-}
-
-.dash_container.expand .dash_section .dash_list .dash_list-item:hover .dash_list-item-name {
-  color: #fff;
-}
-
-.dash_container.expand .dash_section .retract-item {
-  display: flex;  
-}
-.dash_container .dash_section .retract-item {
-  display: none;  
-}
-
-.dash_container.expand .dash_section .expand-item {
-  display: none;  
-}
-
-.dash_container.expand .dash_container-content {
-  padding-left: 200px;
-}
-
-/* header STYLE */
-.header {
-  border-bottom: 1px solid #f5f5f5;
-  height: 50px;
-  margin-bottom: 15px;
-  width: 100%;
-}
-/* container header */
-.header_container {
-  align-items: center;
-  display: flex;
-  height: 50px;
-  justify-content: space-between;
-  padding: 0 15px;
-}
-
-/* search container */
-.search {
-  position: relative;
-}
-/* search input style */
-.search_input {
-  background: #fbfbfb;
-  border-radius: 20px;
-  border: 1px solid #f5f5f5;
-  color: #bdbdbd;
-  font-size: 12px;
-  height: 30px;
-  padding: 0 15px;
-  width: 220px;
-}
-
-/* hover and focus input seacrh */
-.search_input:focus, 
-.search_input:hover {
-  background: #fff;
-  box-shadow: 0px 0px 15px 3px rgba(112,161,255,0.24);
-  transition: .4s;
-}
-/* search button style */
-.search_button {
-  align-items: center;
-  background: #70a1ff;
-  border-radius: 25px;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-  display: flex;
-  font-size: 0;
-  height: 25px;
-  justify-content: center;
-  position: absolute;
-  right: 3px;
-  top: 2px;
-  transition: .2s;
-  width: 25px;
-}
-.search_button i {
-  font-size: 12px;
-}
-.search_button:hover {
-  font-size: 12px;
-  width: 80px;
-}
-.search_button:hover i {
-  margin-left: 5px
-}
-
-/* nav menu list */
-.nav_menu-list {
-  align-items: center;
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-/* nav menu link style */
-.nav_menu-list-item-link {
-  align-items: center;
-  color: #70a1ff;
-  display: flex;
-  height: 50px;
-  justify-content: center;
-  min-width: 50px;
-  transition: .4s;
-  width: auto;
-}
-/* nav menu hover style */
-.nav_menu-list-item-link:hover {
-  background: #70a1ff;
-  color: #fff;
-  text-decoration: none;
-}
 
 /* content container */
+
 .dash_container-content {
-  padding-left: 50px;
-  transition: .4s;
-}
-/* remove button mobile in desktop */
-.dash_section-menu-mobile {
-  display: none
-}
-
-.dash_card_items-content {
-  align-items: center;
-  border-radius: 3px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
-  padding: 15px;
-}
-
-.dash_card_items-content i {
-  font-size: 50px;
-  color: #fff
-}
-
-.dash_card_items-content .items {
-  display: flex;
-  flex-direction: column
-}
-
-.dash_card_items-content .order_number {
-  color: #fff;
-  font-size: 33px;
-}
-
-.dash_card_items-content .order_text {
-  color: #fff
-}
-.dash_charts-card {
-  margin-bottom: 15px;
-  margin-top: 15px;
-}
-.dash-chart-container {
-  border-radius: 3px;
-  border: 1px solid #ebebeb;
-  min-height: 347px;
-  padding: 15px;
-}
-
-.dash_table {
-  margin-bottom: 15px;
-  margin-top: 15px;
-}
-.dash_table .dataTables_filter,
-.dash_table .pagination {
- float: right;
+    padding-left: 50px;
+    transition: .4s;
 }
 
 
-/* mobile 768px */
-@media (max-width: 768px){
-  .dash_list {
-    display: none;
-  }
-  .dash_container.expand .dash_container-content,
-  .dash_container-content {
-    padding-left: 0;
-  }
-  .search_input {
-    width: 155px;
-  }
-  .dash_list-item-name .retract-item {
-    width: 30px
-  }
-  .dash_section-menu-mobile {
-    width: 30px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #70a1ff;
-  }
 
-  .dash_container.expand .dash_list {
-    display: block
-  }
 
-  .dash_container.expand:before {
-    background: #00000059;
-    content: '';
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: 2;
-  }
-  .header_container {
-    padding: 0
-  }
 
-  .dash_container.expand .dash_section {
-    width: 50px;
-  }
-  
-  .nav_menu-list-item-link span {
-    display: none;
-  }
-}
+
+
+

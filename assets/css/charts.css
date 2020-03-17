@@ -1,0 +1,12 @@
+.dash_charts-card {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.dash-chart-container {
+    border-radius: 3px;
+    border: 1px solid var(--palette-color-borders);
+    min-height: 347px;
+    padding: 15px;
+}
+                                      
