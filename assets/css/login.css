@@ -1,0 +1,182 @@
+
+
+.dash_remenber {
+	height: 50px;
+}
+
+.dash_remenber .dash_check {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+.dash_page-login .carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 43%;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.dash_button-login {
+	border:  1px solid #f5f5f5;
+	width: 35px;
+	height: 35px;
+	border-radius: 17px;
+	color:  #ccc;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 10px;
+	transition: .2s;
+}
+
+.dash_button-login:hover {
+	background: var(--palette-color-icons);
+	color:  var(--white);
+	text-decoration: none;
+}
+
+/* register */
+
+.gradient-register {
+	background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+
+.dash_container-pass {
+	position: relative;
+}
+
+.dash_container-pass .pswd_reqs {
+	font-size: 14px;
+    background: #ccd0db;
+    display: block;
+    padding: 7px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+.dash_container-pass .showPswd {
+  background: transparent;
+}
+
+.dash_container-pass .invalid {
+  color: #848482;
+  transition: all .1s ease-in;
+}
+.dash_container-pass .invalid:before {
+  content: "";
+  padding-right: 15px;
+}
+.dash_container-pass .invalidPass {
+  background: rgba(192, 57, 43, 0.85);
+}
+.dash_container-pass .valid {
+  color: #3CBC3C;
+  transition: all .2s ease-in;
+  animation-name: grow;
+  animation-duration: .2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+}
+.dash_container-pass .valid strong{
+    text-shadow: 0px 5px 5px rgba(0,0,0,0.1),
+    5px 10px 5px rgba(0,0,0,0.05),
+    -5px 10px 5px rgba(0,0,0,0.05);
+}
+
+.dash_container-pass .valid::before {
+  content: "\2713 ";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  left: -5px;
+  position: relative;
+  font-weight: 800;
+  animation-name: grow;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  transition: transform 1200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 100ms ease-out;
+  transform: scale(1.3);
+  -webkit-backface-visibility: hidden;
+}
+
+.dash_container-pass .pswd_info ul {
+  padding: 0;
+  margin:  0;
+  list-style: none;
+}
+
+.dash_container-pass .pswd_info li {
+  padding: 5px;
+  text-align: left;
+  transition: all .2s ease-in;
+  font-size: 12px;
+}
+
+
+
+.dash_container-pass .pswd_info {
+    display: none;
+    padding: 15px;
+    text-align: left;
+    margin: 1em auto;
+    width: 400px;
+    position: absolute;
+    left: 105%;
+    top: 15px;
+    border: 1px solid #f5f5f5;
+    border-radius: 3px;
+    z-index: 10;
+    background: #fff;
+}
+
+@media(max-width: 768px ) {
+	.dash_container-pass .pswd_info {
+		left: 0;
+		bottom: 35px;
+		width: 100%;
+		height: auto;
+		top: auto;
+	}
+}
+
+.dash_container-pass .incorrectMsg {
+  display: none;
+}
+
+.dash_container-pass .shake {
+  animation: shake 0.8s cubic-bezier(.36, .07, .19, .97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes grow {
+  50% {
+    transform: scale(1.1);
+  }
+}

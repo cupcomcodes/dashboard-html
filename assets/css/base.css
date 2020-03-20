@@ -1,5 +1,10 @@
+body {
+    font-family: 'Baloo Chettan 2', cursive !important;
+}
 
-
+.form-control:focus {
+    box-shadow: none!important;
+}
 
 .thumb-nail {
     border-radius: 50px;
@@ -37,12 +42,47 @@
 .dash_container-content {
     padding-left: 50px;
     transition: .4s;
+    background: #f1f4f6;
+    padding-top:  15px;
+    padding-bottom:  15px;
+}
+
+
+/* paginate */
+.page-item.active .page-link {
+    background-color: var(--palette-color-icons) !important;
+    border-color: var(--palette-color-icons) !important;
 }
 
 
 
 
 
+.dash_title {
+    padding: 15px;
+    position: relative;
+    margin-bottom:  15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f5f5f5;
+}
 
+.dash_title i {
+    margin-right: 15px;
+    color:  var(--palette-color-icons);
+    font-size: 22px;
+}
 
-
+.dash_title .dash_title-text {
+    color:  #495057;
+}
+.dash_title:after {
+    content: '';
+    display: block;
+    width: 100px;
+    position: absolute;
+    bottom: -2px;
+    height: 3px;
+    left: 0;
+    background: #70a1ff;
+}

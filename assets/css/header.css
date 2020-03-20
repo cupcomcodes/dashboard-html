@@ -1,9 +1,8 @@
 /* header STYLE */
 
 .header {
-    border-bottom: 1px solid #f5f5f5;
+    border-bottom: 1px solid var(--palette-color-borders);
     height: 50px;
-    margin-bottom: 15px;
     width: 100%;
 }
 
@@ -47,7 +46,7 @@
     background: var(--white);
     box-shadow: 0px 0px 15px 3px rgba(112, 161, 255, 0.24);
     transition: .4s;
-}
+} 
 
 
 /* search button style */
